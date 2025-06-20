@@ -5,7 +5,7 @@
 #define MQTT_PORT 1883
 
 String IO_USERNAME = "hoangkhai271611";
-String IO_KEY = "";
+String IO_KEY = "aio_DpMA43BoEIDCE2ItGfn9AN6gsW35";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -48,6 +48,7 @@ void InitMQTT()
 
         String data = "hello ";
         publishData("feed_1", data);
+        publishData("IP",WiFi.localIP().toString());
         Serial.println("Start");
     }
     else
