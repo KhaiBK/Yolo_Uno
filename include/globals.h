@@ -1,26 +1,45 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
-// include libraries
+// ─── System & Core 
+#include <Arduino.h>
 #include <Wire.h>
 #include <WiFi.h>
-#include <DHT20.h>
+#include <LittleFS.h>
+#include <Arduino_JSON.h>
 #include <PubSubClient.h>
+
+// ─── Web Server & OTA 
+#include <WebServer.h>                  
+#include <AsyncTCP.h>
+#include <ESPAsyncWebServer.h>
+#include <ElegantOTA.h>
+
+// ─── Devices & Libraries 
+#include <DHT20.h>
 #include <Ultrasonic.h>
-#include <WebServer.h>
 #include <LiquidCrystal_I2C.h>
 #include <Adafruit_NeoPixel.h>
 
-///
-#include "../src/connect/TaskWifi.h"
-#include "../src/connect/TaskMQTT.h"
-#include "../src/connect/TaskWebServer.h"
-#include "../src/device/TaskDHT20.h"
-#include "../src/device/TaskUltraSonic.h"
-#include "../src/device/TaskFanRelay.h"
-#include "../src/device/TaskLCD.h"
-#include "../src/device/TaskRGB.h"
-#include "../src/device/TaskLed.h"
-#include "../src/device/TaskSoil.h"
-#include "../src/device/TaskLight.h"
-#endif
+// ─── Project Modules ──────────────────────────────────────────────────
+// Common Utilities
+#include "common/TaskLittleFS.h"
+#include "common/ConfigManager.h"
+
+// Connect Tasks
+#include "connect/TaskWifi.h"
+#include "connect/TaskMQTT.h"
+#include "connect/TaskWebSocket.h"
+
+// Device Tasks
+#include "device/TaskDHT20.h"
+#include "device/TaskUltraSonic.h"
+#include "device/TaskFanRelay.h"
+#include "device/TaskLCD.h"
+#include "device/TaskRGB.h"
+#include "device/TaskLed.h"
+#include "device/TaskSoil.h"
+#include "device/TaskLight.h"
+#include "device/DeviceManager.h"
+
+#endif  // GLOBALS_H

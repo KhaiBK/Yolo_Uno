@@ -5,17 +5,11 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println(WiFi.localIP());
+  
   InitWiFi();
-  initWebServer();
   initMQTT();
-  initDHT20();
-  initLCD(); 
-  initFanRelay();
-  initUltrasonic(); 
-  initLed();
-  initLight();
-  initSoil();
-  initRgb();
+  initWebSocket();
+  initdevice();
 }
 
 void loop()
@@ -25,7 +19,7 @@ void loop()
   {
     return;
   }
-  reconnectMQTT();
-  ServerLoop();
+
+  vTaskDelay(pdMS_TO_TICKS(100));
   
 }

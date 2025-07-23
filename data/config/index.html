@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ESP32 Configuration</title>
+  <link rel="stylesheet" href="config.css">
+</head>
+<body>
+  <h2>ESP32 Configuration</h2>
+  <form id="configForm">
+    <label>
+      WiFi SSID:
+      <input type="text" name="wifi_ssid" required placeholder="Your WiFi SSID">
+    </label><br>
+    <label>
+      WiFi Password:
+      <input type="password" name="wifi_password" placeholder="(leave blank if open)">
+    </label><br>
+    <label>
+      MQTT Username:
+      <input type="text" name="mqtt_user" required placeholder="Your MQTT user">
+    </label><br>
+    <label>
+      MQTT Key:
+      <input type="password" name="mqtt_key" required placeholder="Your MQTT key">
+    </label><br>
+    <button type="submit">Save</button>
+  </form>
+  <script src="config.js"></script>
+</body>
+</html>

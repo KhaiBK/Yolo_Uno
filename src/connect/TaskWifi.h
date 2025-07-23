@@ -2,7 +2,12 @@
 #define INC_TASKWIFI_H_
 
 #include "globals.h"
-extern void InitWiFi ();
+
+extern String WIFI_SSID;
+extern String WIFI_PASSWORD;
+
+extern void InitWiFi();
+void wifi_task(void *pvParameter);
 extern bool Wifi_reconnect();
 
 #endif /* INC_TASKWIFI_H_ */

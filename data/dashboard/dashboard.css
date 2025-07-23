@@ -1,0 +1,129 @@
+/* Import Inter font and reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f7fa;
+  color: #334155;
+}
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+header h1 {
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Grid layout */
+main.grid-container {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card common */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e40af;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+/* Sensor list */
+.sensor-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sensor-card li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sensor-card li:last-child {
+  border-bottom: none;
+}
+.sensor-card span:first-child {
+  font-weight: 500;
+  color: #475569;
+}
+.sensor-card span:last-child {
+  font-weight: 600;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+.form-group select,
+.form-group input[type="color"],
+.form-group input[type="range"] {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-toggle {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3b82f6;
+  color: white;
+}
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-toggle {
+  background: #10b981;
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+.btn-toggle.off {
+  background: #ef4444;
+}
+.btn-toggle:hover {
+  opacity: 0.9;
+}
+
+/* Hidden helper */
+.hidden {
+  display: none;
+}
